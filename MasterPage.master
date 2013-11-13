@@ -1,0 +1,64 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="header">
+	<h1>
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png" />
+    </h1>
+</div>
+<div id="left">
+	<div id="menu" class="boxed">
+		<h2 class="heading">Sections</h2>
+	        <asp:ContentPlaceHolder ID="LeftContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+	</div>
+</div>
+<!-- end #left -->
+<!-- end #right -->
+<div id="center">
+	<div class="boxed">
+		<h1 class="heading">
+            <table class="style1">
+                <tr>
+                    <td>
+                        Welcome to Lite Audio Books!     <td align="right">
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    </td>
+                </tr>
+            </table>
+        </h1>
+		<p>
+            <asp:ContentPlaceHolder ID="CenterContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </p>
+			</div>
+</div>
+<!-- end #center -->
+<div style="clear: both;">&nbsp;</div>
+<div id="footer">
+	<p id="legal">Copyright © 2008 Lite. All Rights Reserved. Designed by <a href="#">
+        Group Lite</a>.</p>
+	<p id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+</div>
+    </form>
+</body>
+</html>
